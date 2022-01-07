@@ -17,6 +17,11 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+bootRun {
+	systemProperty 'base64.property', "SGkhIFlvdSBoYXZlIGRlY29kZWQgbWUh"
+	systemProperties System.properties
+}
+
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(11)
