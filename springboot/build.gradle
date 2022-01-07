@@ -1,0 +1,32 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'io.github.jeyjeyemem.externalizedproperties:core:1.0.0-SNAPSHOT'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(11)
+	}
+}
+
+compileJava {
+	options.release = 11
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,31 @@
+plugins {
+	id 'java'
+	id 'application'
+}
+
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'io.github.jeyjeyemem.externalizedproperties:core:1.0.0-SNAPSHOT'
+}
+
+application {
+	// Run in module path.
+	mainModule = 'io.github.jeyjeyemem.externalizedproperties.samples.simple'
+    mainClass = 'io.github.jeyjeyemem.externalizedproperties.samples.simple.Application'
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(11)
+	}
+}
+
+compileJava {
+	options.release = 11
+}
