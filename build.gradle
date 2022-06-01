@@ -1,3 +1,36 @@
-allprojects{
-    group = 'io.github.jeyjeyemem.externalizedproperties'
+ext {
+    externalizedPropertiesVersion = '1.0.0-alpha.2'
+}
+
+allprojects {
+    group = 'io.github.joeljeremy7.externalizedproperties.samples'
+    version = "${externalizedPropertiesVersion}"
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'application'
+
+    dependencies {
+        implementation "io.github.joeljeremy7.externalizedproperties:core:${externalizedPropertiesVersion}"
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(11)
+        }
+    }
+
+    compileJava {
+        options.release = 11
+    }
+
+    test {
+        useJUnitPlatform()
+    }
 }

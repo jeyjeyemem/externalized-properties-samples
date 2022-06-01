@@ -1,6 +1,6 @@
-package io.github.jeyjeyemem.externalizedproperties.samples.springboot.controllers;
+package io.github.joeljeremy7.externalizedproperties.samples.springboot.controllers;
 
-import io.github.jeyjeyemem.externalizedproperties.samples.springboot.ApplicationProperties;
+import io.github.joeljeremy7.externalizedproperties.samples.springboot.ApplicationProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,3 +1,3 @@
-module io.github.jeyjeyemem.externalizedproperties.samples.simple {
-    requires io.github.jeyjeyemem.externalizedproperties.core;
+module io.github.joeljeremy7.externalizedproperties.samples.simple {
+    requires io.github.joeljeremy7.externalizedproperties.core;
 }

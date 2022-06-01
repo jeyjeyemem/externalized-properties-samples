@@ -12,3 +12,4 @@ rootProject.name = 'externalized-properties-samples'
 
 include 'simple'
 include 'springboot'
+include 'decryption'

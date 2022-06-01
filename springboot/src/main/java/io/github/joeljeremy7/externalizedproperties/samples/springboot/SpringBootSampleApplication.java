@@ -1,4 +1,4 @@
-package io.github.jeyjeyemem.externalizedproperties.samples.springboot;
+package io.github.joeljeremy7.externalizedproperties.samples.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

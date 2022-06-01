@@ -1,8 +1,6 @@
-package io.github.jeyjeyemem.externalizedproperties.samples.springboot;
+package io.github.joeljeremy7.externalizedproperties.samples.springboot;
 
-import io.github.jeyjeyemem.externalizedproperties.core.annotations.ExternalizedProperty;
-import io.github.jeyjeyemem.externalizedproperties.core.annotations.ProcessorClasses;
-import io.github.jeyjeyemem.externalizedproperties.core.processing.Base64Decode;
+import io.github.joeljeremy7.externalizedproperties.core.ExternalizedProperty;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,8 +20,4 @@ public interface ApplicationProperties {
         // property does not exist.
         return Arrays.asList(defaultNames);
     }
-
-    @ExternalizedProperty("base64.property")
-    @ProcessorClasses(Base64Decode.class)
-    public String base64Property();
 }

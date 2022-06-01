@@ -1,11 +1,13 @@
-open module io.github.jeyjeyemem.externalizedproperties.samples.springboot {
-    requires io.github.jeyjeyemem.externalizedproperties.core;
+open module io.github.joeljeremy7.externalizedproperties.samples.springboot {
+    requires transitive io.github.joeljeremy7.externalizedproperties.core;
+    
     requires static spring.context;
+    requires transitive spring.core;
     requires spring.web;
     requires spring.boot;
     requires spring.boot.autoconfigure;
 
-    exports io.github.jeyjeyemem.externalizedproperties.samples.springboot;
-    exports io.github.jeyjeyemem.externalizedproperties.samples.springboot.configs;
-    exports io.github.jeyjeyemem.externalizedproperties.samples.springboot.controllers;
+    exports io.github.joeljeremy7.externalizedproperties.samples.springboot;
+    exports io.github.joeljeremy7.externalizedproperties.samples.springboot.configs;
+    exports io.github.joeljeremy7.externalizedproperties.samples.springboot.controllers;
 }

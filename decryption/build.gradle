@@ -1,0 +1,9 @@
+plugins {
+	id 'application'
+}
+
+application {
+	// Run in module path.
+	mainModule = 'io.github.joeljeremy7.externalizedproperties.samples.decryption'
+    mainClass = 'io.github.joeljeremy7.externalizedproperties.samples.decryption.Application'
+}
