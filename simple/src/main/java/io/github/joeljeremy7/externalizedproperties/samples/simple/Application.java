@@ -37,7 +37,7 @@ public class Application {
         // For MapResolver.
         Map<String, String> map = Collections.singletonMap(
             "property", 
-           "property.value.from.map"
+            "property.value.from.map"
         );
 
         return ExternalizedProperties.builder()
