@@ -12,7 +12,7 @@ public class AppConfig {
     ExternalizedProperties externalizedProperties(Environment env) {
         return ExternalizedProperties.builder()
             .defaults()
-            .resolvers(new SpringEnvironmentAdapterResolver(env))
+            .resolvers(new SpringEnvironmentResolverAdapter(env))
             .build();
     }
 

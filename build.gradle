@@ -1,5 +1,5 @@
 ext {
-    externalizedPropertiesVersion = '1.0.0-alpha.2'
+    externalizedPropertiesVersion = '1.0.0-alpha.3'
 }
 
 allprojects {

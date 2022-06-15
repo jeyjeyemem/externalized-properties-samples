@@ -34,13 +34,16 @@ public class Application {
 
         /** Properties from custom_configurations table */
 
-        List<Integer> listPropertyFromCustomTable = applicationProperties.listProperty();
+        List<Integer> listPropertyFromCustomTable = 
+            applicationProperties.listPropertyFromCustomTable();
         System.out.println("list.property from custom table: " + listPropertyFromCustomTable);
 
-        int intPropertyFromCustomTable = applicationProperties.intProperty();
+        int intPropertyFromCustomTable = 
+            applicationProperties.intPropertyFromCustomTable();
         System.out.println("int.property from custom table: " + intPropertyFromCustomTable);
 
-        String propertyFromCustomTable = applicationProperties.property();
+        String propertyFromCustomTable = 
+            applicationProperties.propertyFromCustomTable();
         System.out.println("property from custom table: " + propertyFromCustomTable);
     }
 

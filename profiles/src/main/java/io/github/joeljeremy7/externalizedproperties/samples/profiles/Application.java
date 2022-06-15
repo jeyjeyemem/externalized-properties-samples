@@ -30,6 +30,10 @@ public class Application {
         return ExternalizedProperties.builder()
             .defaults()
             .onProfiles().apply(Application::appPropertiesResolver)
+            .onProfiles("dev", "test", "staging")
+                .apply(Application::nonProdConfig)
+            .onProfiles("prod")
+                .apply(Application::prodConfig)
             .resolvers(ResourceResolver.fromUrl(
                 Application.class.getResource("/app.properties")
             ))
@@ -47,10 +51,15 @@ public class Application {
                 Application.class.getResource(resourceName)
             ));
         } catch (IOException e) {
-            throw new IllegalStateException(
-                "Failed to load " + resourceName, 
-                e
-            );
+            throw new IllegalStateException("Failed to load " + resourceName, e);
         }
+    }
+
+    private static void nonProdConfig(String activeProfile, BuilderConfiguration builder) {
+        // Apply test/dev/staging configurations
+    }
+
+    private static void prodConfig(String activeProfile, BuilderConfiguration builder) {
+        // Apply prod configurations
     }
 }
