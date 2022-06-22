@@ -1,0 +1,16 @@
+plugins {
+	id 'application'
+}
+
+application {
+	// Run in module path.
+	mainModule = 'io.github.joeljeremy7.externalizedproperties.samples.fileformats'
+    mainClass = 'io.github.joeljeremy7.externalizedproperties.samples.fileformats.Application'
+}
+
+dependencies {
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.13.3"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.3"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.3"
+	implementation "com.typesafe:config:1.4.2"
+}
