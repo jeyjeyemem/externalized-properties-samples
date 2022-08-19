@@ -41,9 +41,9 @@ public class Application {
             .uri("https://github.com/joeljeremy7/externalized-properties-samples.git")
             .branch("main")
             .cloneDirectory(Paths.get(System.getProperty("cloneDir")))
-            // May provide credentials
+            // May provide git credentials.
             // .credentialsProvider(new UsernamePasswordCredentialsProvider("test", "test"))
-            // May also provide SSH session factory in case repo cloning via SSH.
+            // May also provide SSH session factory in case of SSH.
             //.sshSessionFactory(...)
             .build();
     }
