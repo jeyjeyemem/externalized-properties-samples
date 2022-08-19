@@ -1,0 +1,14 @@
+plugins {
+	id "application"
+}
+
+dependencies {
+	implementation "io.github.joeljeremy7.externalizedproperties:resolvers-git:${externalizedPropertiesVersion}"
+}
+
+application {
+	// Run in module path.
+	mainModule = "io.github.joeljeremy7.externalizedproperties.samples.git"
+    mainClass = "io.github.joeljeremy7.externalizedproperties.samples.git.Application"
+	applicationDefaultJvmArgs = [ "-DcloneDir=${project.projectDir}/temp-clone-dir" ]
+}

@@ -46,13 +46,9 @@ public class Application {
     ) {
         // Profile specific app properties.
         String resourceName = "/app-" + profile + ".properties";
-        try {
-            builder.resolvers(ResourceResolver.fromUrl(
-                Application.class.getResource(resourceName)
-            ));
-        } catch (IOException e) {
-            throw new IllegalStateException("Failed to load " + resourceName, e);
-        }
+        builder.resolvers(ResourceResolver.fromUrl(
+            Application.class.getResource(resourceName)
+        ));
     }
 
     private static void nonProdConfig(String activeProfile, BuilderConfiguration builder) {

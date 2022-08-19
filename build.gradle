@@ -1,5 +1,5 @@
 ext {
-    externalizedPropertiesVersion = '1.0.0-alpha.3'
+    externalizedPropertiesVersion = '1.0.0-alpha.6'
 }
 
 allprojects {
@@ -27,7 +27,7 @@ subprojects {
     }
 
     compileJava {
-        options.release = 11
+        options.release.set(11)
     }
 
     test {
