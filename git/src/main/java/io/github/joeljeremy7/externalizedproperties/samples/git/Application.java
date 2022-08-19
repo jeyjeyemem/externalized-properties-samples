@@ -1,6 +1,7 @@
 package io.github.joeljeremy7.externalizedproperties.samples.git;
 
 import io.github.joeljeremy7.externalizedproperties.core.ExternalizedProperties;
+import io.github.joeljeremy7.externalizedproperties.core.resolvers.ResourceResolver.PropertiesReader;
 import io.github.joeljeremy7.externalizedproperties.resolvers.git.GitRepository;
 import io.github.joeljeremy7.externalizedproperties.resolvers.git.GitResolver;
 
@@ -30,6 +31,8 @@ public class Application {
         return GitResolver.builder()
             .gitRepository(gitRepository())
             .resourceFilePath("git/src/main/resources/app.properties")
+            // May use other resource reader e.g. json,yaml if resource is in another format.
+            .resourceReader(new PropertiesReader())
             .build();
     }
 
@@ -38,6 +41,10 @@ public class Application {
             .uri("https://github.com/joeljeremy7/externalized-properties-samples.git")
             .branch("main")
             .cloneDirectory(Paths.get(System.getProperty("cloneDir")))
+            // May provide credentials
+            // .credentialsProvider(new UsernamePasswordCredentialsProvider("test", "test"))
+            // May also provide SSH session factory in case repo cloning via SSH.
+            //.sshSessionFactory(...)
             .build();
     }
 }
