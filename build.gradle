@@ -1,36 +1,50 @@
+plugins {
+  id "com.diffplug.spotless" version "6.11.0" apply false
+}
+
 ext {
-    externalizedPropertiesVersion = '1.0.0-alpha.6'
+  externalizedPropertiesVersion = "1.0.0-alpha.7"
 }
 
 allprojects {
-    group = 'io.github.joeljeremy7.externalizedproperties.samples'
-    version = "${externalizedPropertiesVersion}"
+  group = "io.github.joeljeremy7.externalizedproperties.samples"
+  version = "${externalizedPropertiesVersion}"
 
-    repositories {
-        mavenLocal()
-        mavenCentral()
-    }
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
 }
 
 subprojects {
-	apply plugin: 'java'
-	apply plugin: 'application'
+	apply plugin: "java"
+	apply plugin: "application"
+  apply plugin: "com.diffplug.spotless"
 
-    dependencies {
-        implementation "io.github.joeljeremy7.externalizedproperties:core:${externalizedPropertiesVersion}"
+  dependencies {
+    implementation "io.github.joeljeremy7.externalizedproperties:core:${externalizedPropertiesVersion}"
+  }
+
+  java {
+    toolchain {
+      languageVersion = JavaLanguageVersion.of(11)
     }
+  }
 
+  compileJava {
+    options.release.set(11)
+  }
+
+  test {
+    useJUnitPlatform()
+  }
+  
+  spotless {
+    enforceCheck System.properties.containsKey("spotless")
     java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(11)
-        }
+      // Generated code should not be subjected to spotless.
+      target "src/*/java/**/*.java"
+      googleJavaFormat()
     }
-
-    compileJava {
-        options.release.set(11)
-    }
-
-    test {
-        useJUnitPlatform()
-    }
+  }
 }

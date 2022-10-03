@@ -8,20 +8,16 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 public class AppConfig {
-    @Bean
-    ExternalizedProperties externalizedProperties(Environment env) {
-        return ExternalizedProperties.builder()
-            .defaults()
-            .resolvers(new SpringEnvironmentResolverAdapter(env))
-            .build();
-    }
+  @Bean
+  ExternalizedProperties externalizedProperties(Environment env) {
+    return ExternalizedProperties.builder()
+        .defaults()
+        .resolvers(new SpringEnvironmentResolverAdapter(env))
+        .build();
+  }
 
-    @Bean
-    ApplicationProperties applicationProperties(
-            ExternalizedProperties externalizedProperties
-    ) {
-        return externalizedProperties.initialize(
-            ApplicationProperties.class
-        );
-    }
+  @Bean
+  ApplicationProperties applicationProperties(ExternalizedProperties externalizedProperties) {
+    return externalizedProperties.initialize(ApplicationProperties.class);
+  }
 }

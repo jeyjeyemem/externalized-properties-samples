@@ -9,6 +9,6 @@ dependencies {
 application {
 	// Run in module path.
 	mainModule = "io.github.joeljeremy7.externalizedproperties.samples.git"
-    mainClass = "io.github.joeljeremy7.externalizedproperties.samples.git.Application"
+  mainClass = "io.github.joeljeremy7.externalizedproperties.samples.git.Application"
 	applicationDefaultJvmArgs = [ "-DcloneDir=${project.projectDir}/temp-clone-dir" ]
 }
