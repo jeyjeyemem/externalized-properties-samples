@@ -17,8 +17,8 @@ allprojects {
 }
 
 subprojects {
-	apply plugin: "java"
-	apply plugin: "application"
+  apply plugin: "java"
+  apply plugin: "application"
   apply plugin: "com.diffplug.spotless"
 
   dependencies {
