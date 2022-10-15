@@ -1,5 +1,5 @@
-module io.github.joeljeremy7.externalizedproperties.samples.fileformats {
-  requires io.github.joeljeremy7.externalizedproperties.core;
+module io.github.joeljeremy.externalizedproperties.samples.fileformats {
+  requires io.github.joeljeremy.externalizedproperties.core;
   requires com.fasterxml.jackson.core;
   requires com.fasterxml.jackson.databind;
   requires com.fasterxml.jackson.dataformat.xml;

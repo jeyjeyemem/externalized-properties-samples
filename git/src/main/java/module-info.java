@@ -1,4 +1,4 @@
-module io.github.joeljeremy7.externalizedproperties.samples.git {
-  requires io.github.joeljeremy7.externalizedproperties.core;
-  requires io.github.joeljeremy7.externalizedproperties.resolvers.git;
+module io.github.joeljeremy.externalizedproperties.samples.git {
+  requires io.github.joeljeremy.externalizedproperties.core;
+  requires io.github.joeljeremy.externalizedproperties.git;
 }

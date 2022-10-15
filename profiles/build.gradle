@@ -4,6 +4,6 @@ plugins {
 
 application {
   // Run in module path.
-  mainModule = "io.github.joeljeremy7.externalizedproperties.samples.profiles"
-  mainClass = "io.github.joeljeremy7.externalizedproperties.samples.profiles.Application"
+  mainModule = "io.github.joeljeremy.externalizedproperties.samples.profiles"
+  mainClass = "io.github.joeljeremy.externalizedproperties.samples.profiles.Application"
 }

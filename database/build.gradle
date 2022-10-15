@@ -3,12 +3,12 @@ plugins {
 }
 
 dependencies {
-  implementation "io.github.joeljeremy7.externalizedproperties:resolvers-database:${externalizedPropertiesVersion}"
+  implementation "io.github.joel-jeremy.externalized-properties:externalized-properties-database:${externalizedPropertiesVersion}"
   runtimeOnly "com.h2database:h2:2.1.214"
 }
 
 application {
   // Run in module path.
-  mainModule = "io.github.joeljeremy7.externalizedproperties.samples.database"
-  mainClass = "io.github.joeljeremy7.externalizedproperties.samples.database.Application"
+  mainModule = "io.github.joeljeremy.externalizedproperties.samples.database"
+  mainClass = "io.github.joeljeremy.externalizedproperties.samples.database.Application"
 }
